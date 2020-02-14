@@ -1,0 +1,35 @@
+{
+    "name": "ldu-gulputils",
+    "description": "README.md",
+    "version": "1.0.0",
+    "author": {
+        "name": "LilDutils"
+    },
+    "license": "LICENSE",
+    "homepage": "https://www.ndworks.hu/lildutils/ldu-gulputils",
+    "repository": {
+        "url": "https://bitbucket.org/lildutils/ldu-gulputils.git"
+    },
+    "private": true,
+    "dependencies": {
+        "dateformat": "3.0.3",
+        "deepmerge": "4.2.2",
+        "del": "5.1.0",
+        "hash-generator": "0.1.0",
+        "minimist": "1.2.0",
+        "username": "5.1.0"
+    },
+    "peerDependencies": {
+        "dateformat": "3.0.3",
+        "deepmerge": "4.2.2",
+        "del": "5.1.0",
+        "hash-generator": "0.1.0",
+        "minimist": "1.2.0",
+        "username": "5.1.0"
+    },
+    "devDependencies": {
+        "gulp": "4.0.2",
+        "gulp-json-editor": "2.5.4",
+        "merge-stream": "2.0.0"
+    }
+}
