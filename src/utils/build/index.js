@@ -80,3 +80,17 @@ function mergeJSON(source) {
     }
     return deepmerge.all(source);
 }
+
+/**
+ * @param {Object} packageJSON
+ * @returns {Object} the processed packageJSON Object
+ */
+function processPackageFile(packageJSON) {
+    if (!packageJSON) {
+        throw new Error('ERR: packageJSON is missing');
+    }
+    return {
+        name: packageJSON.name,
+        version: packageJSON.version
+    };
+}
