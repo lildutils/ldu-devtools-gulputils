@@ -66,3 +66,17 @@ function getUsername() {
         throw new Error(e);
     }
 }
+
+/**
+ * @param {Object|Array<Object>} source
+ * @returns {Object} the merged JSON objects
+ */
+function mergeJSON(source) {
+    if (!source) {
+        throw new Error('ERR: source is missing');
+    }
+    if (typeof source != 'Array') {
+        source = [source];
+    }
+    return deepmerge.all(source);
+}
