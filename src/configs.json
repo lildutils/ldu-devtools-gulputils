@@ -1,0 +1,11 @@
+{
+    "dateFormat": "yyyymmddHHMMss",
+    "hashLength": 8,
+    "patterns": {
+        "ALL_FOLDER": "/**/*",
+        "EMPTY": "",
+        "PHP_START": "<?php",
+        "PHP_END": "?>"
+    },
+    "separator": "-"
+}
