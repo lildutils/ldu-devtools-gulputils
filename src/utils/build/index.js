@@ -22,3 +22,18 @@ function generateHash(hashLength) {
     const length = hashLength || configs.hashLength;
     return hashing(length);
 }
+
+/**
+ * @returns {any} the 'env' command run argument
+ */
+function getActiveProfile() {
+    try {
+        const argv = minimist(process.argv.slice(2));
+        if (!!argv.env) {
+            return argv.env;
+        }
+    } catch (e) {
+        throw new Error(e);
+    }
+    throw new Error('ERR: profile is missing');
+}
