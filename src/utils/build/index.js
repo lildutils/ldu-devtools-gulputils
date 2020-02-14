@@ -55,3 +55,14 @@ function getBuildName(projectName, projectVersion, opt_separator) {
     const fileExtension = '.zip';
     return projectName + separator + projectVersion + separator + fileDate + fileExtension;
 }
+
+/**
+ * @returns {any} the system username 
+ */
+function getUsername() {
+    try {
+        return username.sync();
+    } catch (e) {
+        throw new Error(e);
+    }
+}
