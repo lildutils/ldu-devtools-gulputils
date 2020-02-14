@@ -37,3 +37,21 @@ function getActiveProfile() {
     }
     throw new Error('ERR: profile is missing');
 }
+
+/**
+ * @param {string} projectName
+ * @param {string} projectVersion
+ * @returns {string} the build package name
+ */
+function getBuildName(projectName, projectVersion, opt_separator) {
+    if (!projectName) {
+        throw new Error('ERR: projectName is missing');
+    }
+    if (!projectVersion) {
+        throw new Error('ERR: projectVersion is missing');
+    }
+    const separator = opt_separator || configs.separator;
+    const fileDate = dateUtils.getNowFormatted(configs.zipDateFormat);
+    const fileExtension = '.zip';
+    return projectName + separator + projectVersion + separator + fileDate + fileExtension;
+}
