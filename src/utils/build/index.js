@@ -94,3 +94,16 @@ function processPackageFile(packageJSON) {
         version: packageJSON.version
     };
 }
+
+/**
+ * @param {string} content
+ * @return {string} 
+ */
+function processPHPContent(content) {
+    if (!content) {
+        throw new Error('ERR: content is missing');
+    }
+    content = content.replace(/\<\?php/g, configs.patterns.EMPTY);
+    content = content.replace(/\?\>/g, configs.patterns.EMPTY);
+    return configs.patterns.PHP_START + content + configs.patterns.PHP_END;
+}
