@@ -1,16 +1,19 @@
 {
-    "name": "ldu-gulputils",
+    "name": "@lildutils/ldu-gulputils",
     "description": "README.md",
     "version": "1.0.0",
     "author": {
-        "name": "LilDutils"
+        "name": "lildworks",
+        "email": "lildworks@gmail.com"
     },
     "license": "LICENSE",
-    "homepage": "https://www.ndworks.hu/lildutils/ldu-gulputils",
+    "homepage": "https://github.com/lildutils/ldu-gulputils",
     "repository": {
-        "url": "https://bitbucket.org/lildutils/ldu-gulputils.git"
+        "url": "github.com/lildutils/ldu-gulputils.git"
     },
-    "private": true,
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
     "dependencies": {
         "dateformat": "3.0.3",
         "deepmerge": "4.2.2",
