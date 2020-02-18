@@ -1,18 +1,14 @@
 {
-    "name": "@lildutils/ldu-gulputils",
-    "description": "README.md",
-    "version": "1.0.0",
+    "name": "ldu-gulputils",
+    "description": "Gulp task utilities from LilDutils",
+    "version": "1.1.0-SNAPSHOT",
     "author": {
         "name": "lildworks",
         "email": "lildworks@gmail.com"
     },
-    "license": "LICENSE",
-    "homepage": "https://github.com/lildutils/ldu-gulputils",
+    "license": "MIT",
     "repository": {
-        "url": "github.com/lildutils/ldu-gulputils.git"
-    },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
+        "url": "https://github.com/lildutils/ldu-gulputils.git"
     },
     "dependencies": {
         "dateformat": "3.0.3",
@@ -32,7 +28,6 @@
     },
     "devDependencies": {
         "gulp": "4.0.2",
-        "gulp-json-editor": "2.5.4",
         "merge-stream": "2.0.0"
     }
 }
