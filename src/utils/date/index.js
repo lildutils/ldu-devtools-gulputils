@@ -2,10 +2,11 @@ exports.getNow = getNow;
 exports.getNowFormatted = getNowFormatted;
 
 
-const configs = require('../../configs.json');
 const dateformat = require('dateformat');
 
 /**
+ * Gets the now as Date
+ * 
  * @returns {Date} the now
  */
 function getNow() {
@@ -13,9 +14,11 @@ function getNow() {
 }
 
 /**
- * @param {string=} dateFormat 
+ * Gets the formatted now as string
+ * 
+ * @param {string=} opt_dateFormat 
  * @returns {string} the formatted now
  */
-function getNowFormatted(dateFormat) {
-    return dateformat(new Date(), dateFormat || configs.dateFormat);
+function getNowFormatted(opt_dateFormat) {
+    return dateformat(new Date(), opt_dateFormat || 'yyyymmddHHMMss');
 }
