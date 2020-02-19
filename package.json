@@ -1,7 +1,7 @@
 {
     "name": "ldu-gulputils",
     "description": "Utilities for Gulp Tasks",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "author": {
         "name": "lildworks",
         "email": "lildworks@gmail.com"
