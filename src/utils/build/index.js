@@ -97,13 +97,14 @@ function mergeJSON(source) {
  * Copies the given properties from the given package.json file to a new processed object
  * 
  * @param {Object} packageJSON
+ * @param {Array<any>?} opt_properties
  * @returns {Object} the processed packageJSON Object
  */
-function processPackageFile(packageJSON, properties) {
+function processPackageFile(packageJSON, opt_properties) {
     if (!packageJSON) {
         throw new Error('ERR: packageJSON is missing');
     }
-    if (!properties) {
+    if (!opt_properties) {
         return {
             name: packageJSON.name,
             version: packageJSON.version
