@@ -2,7 +2,7 @@
 
 ## BuildUtils
 
-Build Utilities for easy manage Gulpfile.js build tasks, you can import it in your Gulpfile.js
+Build Utilities for you can easy manage Gulpfile.js build tasks. To use it, you can import it in your Gulpfile.js
 
 ```js
 const buildUtils = require('ldu-gulputils').buildUtils;
@@ -78,7 +78,7 @@ console.log(buildUtils.processPHPContent('<?php echo "hello world";?><?php echo 
 
 ## DateUtils
 
-Date Utilities for easy handle date in Gulpfile.js tasks, you can import it in your Gulpfile.js
+Date Utilities for you can easy handle date in Gulpfile.js build tasks. To use it, you can import it in your Gulpfile.js
 
 ```js
 const dateUtils = require('ldu-gulputils').dateUtils;
@@ -106,13 +106,15 @@ console.log(dateUtils.getNowFormatted());
 
 ### Install
 
+Installs all of the dependencies for this project
+
 ```sh
 npm install
 ```
 
 ### Build
 
-If you want to build the source code, you should run:
+Builds this project to the **_dist** folder and creates a zip package from the dist content into the **_build** folder
 
 ```sh
 gulp build
