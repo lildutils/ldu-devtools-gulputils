@@ -135,3 +135,10 @@ function processPHPContent(content) {
     content = content.replace(/\?\>/g, '');
     return '<?php' + content + '?>';
 }
+
+function processArgs() {
+	return process.argv
+		.slice(2)
+		.map(p => p.indexOf("=") > -1 ? { key: p.split("=")[0].replace("--", ""), value: p.split("=")[1] } : { key: p.replace("--", ""), value: null })
+		.reduce((obj, cur, i) => { obj[cur.key] = cur.value; return obj; }, {});
+}
