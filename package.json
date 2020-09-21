@@ -14,7 +14,7 @@
         "build": "gulp build",
         "publish": "cd dist/ && npm login && npm publish"
     },
-    "dependencies": {
+    "peerDependencies": {
         "dateformat": "3.0.3",
         "deepmerge": "4.2.2",
         "del": "5.1.0",
@@ -22,7 +22,7 @@
         "minimist": "1.2.5",
         "username": "5.1.0"
     },
-    "peerDependencies": {
+    "dependencies": {
         "dateformat": "3.0.3",
         "deepmerge": "4.2.2",
         "del": "5.1.0",
