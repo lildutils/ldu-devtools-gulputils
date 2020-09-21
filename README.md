@@ -76,6 +76,15 @@ console.log(buildUtils.processPHPContent('<?php echo "hello world";?><?php echo 
 // output: '<?php echo "hello world"; echo php_info();?>'
 ```
 
+### processArgs
+
+Processing the arguments, and giving back they in a JSON object
+
+```js
+console.log(buildUtils.processArgs());
+// output: { processArgsKeyOne: processArgsValueOne, processArgsKeyTwo: processArgsValueTwo }
+```
+
 ## DateUtils
 
 Date Utilities for you can easy handle date in Gulpfile.js build tasks. To use it, you can import it in your Gulpfile.js
@@ -114,7 +123,7 @@ npm install
 
 ### Build
 
-Builds this project to the **_dist** folder and creates a zip package from the dist content into the **_build** folder
+Builds this project to the **dist** folder and creates a zip package from the dist content into the **build** folder
 
 ```sh
 gulp build
@@ -122,7 +131,7 @@ gulp build
 
 ## About
 
-To get more informations about this project, or if you have any question or suggestion, please send an email to [me](mailto:lildworks@gmail.com)
+To get more informations about this project, or if you have any question or suggestion, please send an email to [me](mailto:info@lildworks.hu)
 
 ## 
 

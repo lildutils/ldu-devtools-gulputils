@@ -1,0 +1,10 @@
+{
+    "separator": "-",
+    "dateFormat": "yyyymmddHHMMss",
+    "zipDateFormat": "yyyymmddHHMMss",
+    "patterns": {
+        "EMPTY": "",
+        "PHP_START": "<?php",
+        "PHP_END": "?>"
+    }
+}
