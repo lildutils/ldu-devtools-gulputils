@@ -1,0 +1,10 @@
+SET LDT_MODE=LDuGULP
+
+SET UPDATE=IF EXIST package-lock.json DEL package-lock.json && npm cache clear --force && npm prune && npm install && npm update
+SET U=IF EXIST package-lock.json DEL package-lock.json && npm cache clear --force && npm prune && npm install && npm update
+
+SET BUILD=node_modules\.bin\gulp.cmd build
+SET B=node_modules\.bin\gulp.cmd build
+
+SET PUBLISH=CD _dist && npm login && npm publish
+SET P=CD _dist && npm publish

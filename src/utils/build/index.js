@@ -5,6 +5,7 @@ exports.getUsername = getUsername;
 exports.mergeJSON = mergeJSON;
 exports.processPackageFile = processPackageFile;
 exports.processPHPContent = processPHPContent;
+exports.processArgs = processArgs;
 
 
 const dateUtils = require('../date');
@@ -136,9 +137,25 @@ function processPHPContent(content) {
     return '<?php' + content + '?>';
 }
 
+/**
+ * Processing the arguments, and giving back they in a JSON object
+ * 
+ * @return {Object} the processed arguments
+ */
 function processArgs() {
-	return process.argv
-		.slice(2)
-		.map(p => p.indexOf("=") > -1 ? { key: p.split("=")[0].replace("--", ""), value: p.split("=")[1] } : { key: p.replace("--", ""), value: null })
-		.reduce((obj, cur, i) => { obj[cur.key] = cur.value; return obj; }, {});
+    return process.argv
+        .slice(2)
+        .map(p => p.indexOf("=") > -1
+            ? {
+                key: p.split("=")[0].replace("--", ""),
+                value: p.split("=")[1]
+            }
+            : {
+                key: p.replace("--", ""),
+                value: null
+            })
+        .reduce((obj, cur, i) => {
+            obj[cur.key] = cur.value;
+            return obj;
+        }, {});
 }

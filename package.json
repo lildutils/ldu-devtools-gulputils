@@ -1,7 +1,7 @@
 {
     "name": "ldu-gulputils",
     "description": "Utilities for Gulp Tasks",
-    "version": "1.2.1",
+    "version": "1.2.2-SNAPSHOT",
     "author": {
         "name": "lildworks",
         "email": "lildworks@gmail.com"
@@ -15,7 +15,7 @@
         "deepmerge": "4.2.2",
         "del": "5.1.0",
         "hash-generator": "0.1.0",
-        "minimist": "1.2.0",
+        "minimist": "1.2.5",
         "username": "5.1.0"
     },
     "peerDependencies": {
@@ -23,7 +23,7 @@
         "deepmerge": "4.2.2",
         "del": "5.1.0",
         "hash-generator": "0.1.0",
-        "minimist": "1.2.0",
+        "minimist": "1.2.5",
         "username": "5.1.0"
     },
     "devDependencies": {
