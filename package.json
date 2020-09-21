@@ -10,6 +10,10 @@
     "repository": {
         "url": "https://github.com/lildutils/ldu-gulputils.git"
     },
+    "scripts": {
+        "build": "gulp build",
+        "publish": "cd dist/ && npm login && npm publish"
+    },
     "dependencies": {
         "dateformat": "3.0.3",
         "deepmerge": "4.2.2",

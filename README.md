@@ -4,7 +4,7 @@
 
 Build Utilities for you can easy manage Gulpfile.js build tasks. To use it, you can import it in your Gulpfile.js
 
-```js
+``` js
 const buildUtils = require('ldu-gulputils').buildUtils;
 ```
 
@@ -12,7 +12,7 @@ const buildUtils = require('ldu-gulputils').buildUtils;
 
 It generates a unique hash string with given length
 
-```js
+``` js
 console.log(buildUtils.generateHash(16));
 // output: generated hash with 16 length
 // NOTE: the default hash length is 8
@@ -22,7 +22,7 @@ console.log(buildUtils.generateHash(16));
 
 It returns the value from the --p={activeProfile} argument
 
-```js
+``` js
 console.log(buildUtils.getActiveProfile());
 // output: 'dev'
 // NOTE: if running gulp --p=dev
@@ -32,7 +32,7 @@ console.log(buildUtils.getActiveProfile());
 
 It returns a formatted .zip file name for builds by given project informations
 
-```js
+``` js
 console.log(buildUtils.getBuildName('project-name', '1.0.0-SNAPSHOT'));
 // output: project-name-1.0.0-SNAPSHOT-yyyymmddHHMMss.zip
 ```
@@ -41,7 +41,7 @@ console.log(buildUtils.getBuildName('project-name', '1.0.0-SNAPSHOT'));
 
 It returns the value of your username on your operating system
 
-```js
+``` js
 console.log(buildUtils.getUsername());
 // output: %USERNAME% | $USER
 ```
@@ -50,11 +50,13 @@ console.log(buildUtils.getUsername());
 
 It merges the given source JSON objects into one JSON object
 
-```js
-console.log(buildUtils.mergeJSON(
-    {"hello": "hello", "number": 1},
-    {"hello": "world"}
-));
+``` js
+console.log(buildUtils.mergeJSON({
+    "hello": "hello",
+    "number": 1
+}, {
+    "hello": "world"
+}));
 // output: { "hello": "world", "number": 1 }
 ```
 
@@ -62,7 +64,7 @@ console.log(buildUtils.mergeJSON(
 
 Copies the given properties from the given package.json file to a new processed object
 
-```js
+``` js
 console.log(buildUtils.processPackageFile(packageJSON, 'hello'));
 // output: { "hello": value of packageJSON.hello }
 ```
@@ -71,7 +73,7 @@ console.log(buildUtils.processPackageFile(packageJSON, 'hello'));
 
 Concatenate the given content from .php files into one processed string value
 
-```js
+``` js
 console.log(buildUtils.processPHPContent('<?php echo "hello world";?><?php echo php_info();?>'));
 // output: '<?php echo "hello world"; echo php_info();?>'
 ```
@@ -80,7 +82,7 @@ console.log(buildUtils.processPHPContent('<?php echo "hello world";?><?php echo 
 
 Processing the arguments, and giving back they in a JSON object
 
-```js
+``` js
 console.log(buildUtils.processArgs());
 // output: { processArgsKeyOne: processArgsValueOne, processArgsKeyTwo: processArgsValueTwo }
 ```
@@ -89,7 +91,7 @@ console.log(buildUtils.processArgs());
 
 Date Utilities for you can easy handle date in Gulpfile.js build tasks. To use it, you can import it in your Gulpfile.js
 
-```js
+``` js
 const dateUtils = require('ldu-gulputils').dateUtils;
 ```
 
@@ -97,7 +99,7 @@ const dateUtils = require('ldu-gulputils').dateUtils;
 
 Gets the now as Date
 
-```js
+``` js
 console.log(dateUtils.getNow());
 // output: now Date
 ```
@@ -106,7 +108,7 @@ console.log(dateUtils.getNow());
 
 Gets the formatted now as string
 
-```js
+``` js
 console.log(dateUtils.getNowFormatted());
 // output: now string in yyyymmddHHMMss format
 ```
@@ -117,7 +119,7 @@ console.log(dateUtils.getNowFormatted());
 
 Installs all of the dependencies for this project
 
-```sh
+``` sh
 npm install
 ```
 
@@ -125,7 +127,7 @@ npm install
 
 Builds this project to the **dist** folder and creates a zip package from the dist content into the **build** folder
 
-```sh
+``` sh
 gulp build
 ```
 
