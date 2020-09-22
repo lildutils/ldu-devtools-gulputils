@@ -1,7 +1,7 @@
 {
     "name": "ldu-gulputils",
     "description": "Utilities for Gulp Tasks",
-    "version": "1.3.2",
+    "version": "1.4.0",
     "author": {
         "name": "lildworks",
         "email": "lildworks@gmail.com"
@@ -11,8 +11,7 @@
         "url": "https://github.com/lildutils/ldu-gulputils.git"
     },
     "scripts": {
-        "build": "gulp build",
-        "publish": "cd dist/ && npm login && npm publish"
+        "build": "gulp build"
     },
     "peerDependencies": {
         "dateformat": "3.0.3",
