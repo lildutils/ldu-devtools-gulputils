@@ -1,17 +1,14 @@
 {
-    "name": "ldu-gulputils",
+    "name": "@ldu-devtools/gulputils",
     "description": "Utilities for Gulp Tasks",
-    "version": "1.4.1",
+    "version": "2.0.0",
     "author": {
-        "name": "lildworks",
-        "email": "lildworks@gmail.com"
+        "name": "LilDworks",
+        "email": "info@lildworks.hu"
     },
     "license": "MIT",
     "repository": {
-        "url": "https://github.com/lildutils/ldu-gulputils.git"
-    },
-    "scripts": {
-        "build": "gulp build"
+        "url": "https://github.com/lildutils/ldu-devtools-gulputils.git"
     },
     "peerDependencies": {
         "dateformat": "3.0.3",

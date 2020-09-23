@@ -1,14 +1,4 @@
-exports.generateHash = generateHash;
-exports.getActiveProfile = getActiveProfile;
-exports.getBuildName = getBuildName;
-exports.getUsername = getUsername;
-exports.mergeJSON = mergeJSON;
-exports.processPackageFile = processPackageFile;
-exports.processPHPContent = processPHPContent;
-exports.processArgs = processArgs;
-
-
-const dateUtils = require('../date');
+const dateUtils = require('../dateUtils');
 const hashing = require('hash-generator');
 const minimist = require('minimist');
 const username = require('username');
@@ -25,6 +15,8 @@ function generateHash(hashLength) {
     return hashing(length);
 }
 
+exports.generateHash = generateHash;
+
 /**
  * It returns the value from the --p={activeProfile} argument
  * 
@@ -39,8 +31,10 @@ function getActiveProfile() {
     } catch (e) {
         throw new Error(e);
     }
-    throw new Error('ERR: active profile is missing');
+    throw new Error('ERR: "activeProfile" is missing');
 }
+
+exports.getActiveProfile = getActiveProfile;
 
 /**
  * It returns a formatted .zip file name for builds by given project informations
@@ -54,16 +48,18 @@ function getActiveProfile() {
  */
 function getBuildName(projectName, projectVersion, opt_separator, opt_dateformat, opt_extension) {
     if (!projectName) {
-        throw new Error('ERR: projectName is missing');
+        throw new Error('ERR: "projectName" is missing');
     }
     if (!projectVersion) {
-        throw new Error('ERR: projectVersion is missing');
+        throw new Error('ERR: "projectVersion" is missing');
     }
     const separator = opt_separator || '-';
     const fileDate = dateUtils.getNowFormatted(opt_dateformat || 'yyyymmddHHMMss');
     const fileExtension = opt_extension || '.zip';
     return projectName + separator + projectVersion + separator + fileDate + fileExtension;
 }
+
+exports.getBuildName = getBuildName;
 
 /**
  * It returns the value of your username on your operating system
@@ -77,6 +73,8 @@ function getUsername() {
         throw new Error(e);
     }
 }
+
+exports.getUsername = getUsername;
 
 /**
  * It merges the given source JSON objects into one JSON object
@@ -93,6 +91,8 @@ function mergeJSON(source) {
     }
     return deepmerge.all(source);
 }
+
+exports.mergeJSON = mergeJSON;
 
 /**
  * Copies the given properties from the given package.json file to a new processed object
@@ -122,6 +122,8 @@ function processPackageFile(packageJSON, opt_properties) {
     return processedPackageJSON;
 }
 
+exports.processPackageFile = processPackageFile;
+
 /**
  * Concatenate the given content from .php files into one processed string value
  * 
@@ -136,6 +138,8 @@ function processPHPContent(content) {
     content = content.replace(/\?\>/g, '');
     return '<?php' + content + '?>';
 }
+
+exports.processPHPContent = processPHPContent;
 
 /**
  * Processing the arguments, and giving back they in a JSON object
@@ -159,3 +163,5 @@ function processArgs() {
             return obj;
         }, {});
 }
+
+exports.processArgs = processArgs;

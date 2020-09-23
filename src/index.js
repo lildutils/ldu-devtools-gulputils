@@ -1,3 +1,3 @@
-exports.buildUtils = require('./utils/build');
-exports.dateUtils = require('./utils/date');
+exports.buildUtils = require('./utils/buildUtils');
+exports.dateUtils = require('./utils/dateUtils');
 

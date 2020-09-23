@@ -1,11 +1,11 @@
-# ldu-gulputils
+# @ldu-devtools/gulputils
 
 ## BuildUtils
 
 Build Utilities for you can easy manage Gulpfile.js build tasks. To use it, you can import it in your Gulpfile.js
 
 ``` js
-const buildUtils = require('ldu-gulputils').buildUtils;
+const buildUtils = require('@ldu-devtools/gulputils').buildUtils;
 ```
 
 ### generateHash
@@ -33,7 +33,7 @@ console.log(buildUtils.getActiveProfile());
 It returns a formatted .zip file name for builds by given project informations
 
 ``` js
-console.log(buildUtils.getBuildName('project-name', '1.0.0-SNAPSHOT'));
+console.log(buildUtils.getBuildName('project-name', '0.0.0-SNAPSHOT'));
 // output: project-name-1.0.0-SNAPSHOT-yyyymmddHHMMss.zip
 ```
 
@@ -84,7 +84,8 @@ Processing the arguments, and giving back they in a JSON object
 
 ``` js
 console.log(buildUtils.processArgs());
-// output: { processArgsKeyOne: processArgsValueOne, processArgsKeyTwo: processArgsValueTwo }
+// output: { hello: world, arg2: 3 }
+// NOTE: if running gulp --p=dev
 ```
 
 ## DateUtils
@@ -92,7 +93,7 @@ console.log(buildUtils.processArgs());
 Date Utilities for you can easy handle date in Gulpfile.js build tasks. To use it, you can import it in your Gulpfile.js
 
 ``` js
-const dateUtils = require('ldu-gulputils').dateUtils;
+const dateUtils = require('@ldu-devtools/gulputils').dateUtils;
 ```
 
 ### getNow
