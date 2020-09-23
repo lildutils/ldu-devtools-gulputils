@@ -3,6 +3,7 @@
 
 # generated
 /build/
+/DEV-INF/
 /dist/
 /tmp/
 /zip/
