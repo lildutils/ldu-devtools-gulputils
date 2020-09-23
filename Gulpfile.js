@@ -75,7 +75,7 @@ copyZip.displayName = 'copy:zip';
 gulp.task('copyZip', copyZip);
 
 function cleanZip() {
-    return del([configs.dist + '/' + packageJson.name + '*.tgz']);
+    return del([configs.dist + '/*.tgz']);
 }
 cleanZip.displayName = 'clean:zip';
 gulp.task('cleanZip', cleanZip);
