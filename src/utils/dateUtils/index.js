@@ -1,7 +1,3 @@
-exports.getNow = getNow;
-exports.getNowFormatted = getNowFormatted;
-
-
 const dateformat = require('dateformat');
 
 /**
@@ -13,6 +9,8 @@ function getNow() {
     return new Date();
 }
 
+exports.getNow = getNow;
+
 /**
  * Gets the formatted now as string
  * 
@@ -22,3 +20,5 @@ function getNow() {
 function getNowFormatted(opt_dateFormat) {
     return dateformat(new Date(), opt_dateFormat || 'yyyymmddHHMMss');
 }
+
+exports.getNowFormatted = getNowFormatted;
