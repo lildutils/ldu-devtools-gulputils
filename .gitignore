@@ -10,11 +10,10 @@
 # dependencies
 /bower_components/
 /node_modules/
-/lib/
 /libs/
+/lib/
 
 # misc
 /npm-debug.log
 /package-lock.json
-
 .npmrc
